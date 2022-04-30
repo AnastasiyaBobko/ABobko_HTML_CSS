@@ -5,20 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   </head>
 
-    <style media="screen">
-body {font-family: sans-serif;
-font-size: 20px;
-background-color: rgb(247, 33, 33);
-}
-
-    </style>
-  
-</head>
-
-
-
-<body>
+   <body>
 
   <h1 align="center">Заполните анкету</h1>
 
@@ -32,13 +21,13 @@ background-color: rgb(247, 33, 33);
 
 <fieldset>
     <legend>Паспортные данные</legend>
-    <input type="text" name="seria_passport" placeholder="AA" pattern="^[A-Z]{2}" maxlength="2"> <br>
-        <input type="text" name="number_passport"  placeholder="номер" pattern="^[0-9]{7}" maxlength="7">
+    <input type="text" name="seria_passport" placeholder="AA" pattern="^[A-Z]{2,}" minlength="2"> <br>
+        <input type="text" name="number_passport"  placeholder="номер" pattern="^[0-9]{7,}" minlength="7">
     </fieldset>
 
     <fieldset>
     <legend>Дата рождения</legend>
-    <input type="text" name="year_burth" placeholder="2000" pattern="^[A-Z]{4}" maxlength="4"> <br>
+    <input type="text" name="year_birth" placeholder="2000" pattern="^[0-9]{4}" maxlength="4"> <br>
     <select name="month_birth">
         <option value="Jan">Январь</option>
         <option value="Febr">Февраль</option>
@@ -54,7 +43,9 @@ background-color: rgb(247, 33, 33);
         <option value="Dec">Декабрь</option>
         <option value="0" selected>Январь</option>
         </select> <br>
-
+        
+        <INPUT required TYPE="number" name="numbers1" min="1" max="31" step="1">
+       
         <label for="сitizenship">Национальность</label> <br>
         <select name="citizenship">
         <option value="BY">РБ</option>
@@ -84,7 +75,7 @@ background-color: rgb(247, 33, 33);
         <legend>Домашние животные</legend>
   
         <select name="hobby" multiple  size="12" >
-            <optgroup label="Попугаи">
+            <optgroup  label="Попугаи">
                   <option value="wave_parrot">Волнистный</option>
                   <option value="ara">Ара</option>
                   <option value="lovebird">Неразлучник</option>
@@ -120,7 +111,7 @@ background-color: rgb(247, 33, 33);
     <fieldset> 
         <LEGEND>Координаты</LEGEND> 
 
-       <INPUT required TYPE="email" ID="login" NAME="login" placeholder="введите адрес электронной почты"> <br> <!--доделаь валидацию --> 
+       <INPUT required TYPE="email" ID="login" NAME="login" placeholder="введите адрес электронной почты"> <br> 
       
        <INPUT required TYPE="url" ID="pass" NAME="password" placeholder="введите адрес сайта">
       

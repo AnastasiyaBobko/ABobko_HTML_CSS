@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+.container1{
+  display:flex;
+  align-items: flex-start;
+  background-color: #dbdbdb;
+ 
+}
+.menu {flex:none; #CCCCCC; width:15em;}
+.container2 {display: flex; flex-direction: column; flex-grow: 2;}
+.content {display: flex; flex-direction: column; background-color: #AAAAAA; margin-bottom: 0.2em; overflow: hidden;}
+.icon {
+align-self: flex-end;
+}
+.clear {margin-bottom: 2em;}
+.footer {background-color:rgb(239, 239, 239);}
+.head {font-weight: bold;}
+
+
+</style>
+
+<body>
+<div class="container1">
+
+<div class="menu">
+<Ul> <p class="head"> Блок навигация</p>
+<li> Ширина 15em</li>
+<li>Деолжен присутствовать цвет фона</li>
+<li>Распологается слева</li>
+<li>Блок навигации заполните контентом достаточным, чтобы по высоте
+     он начинал захватывать вторую статью, как показано в данном примере</li>
+     </Ul>
+</div>
+<div class="container2">
+<div class="content">
+ 
+  <p class="head">Статья 1</p> 
+      <p> Размер блока: 
+    Занимает всю доступную ширину 
+    Должен присутствовать цвет фона 
+    Во всех "статьях" сделайте отступ снизу от соседей равным .2em при помощи свойства margin- 
+    bottom
+   </p>
+</div>
+
+
+<div class="content">
+    
+   <p class="head">Статья 2</p> 
+    <p>Размер блока: 
+    Занимает всю доступную ширину 
+    Должен присутствовать цвет фона 
+    Во всех "статьях" сделайте отступ снизу от соседей равным .2em при помощи свойства margin 
+    -bottom.
+ Картинка вставлена при помощи тега, плавание организовано по правому краю внутри 
+ данной статьи для этой картинки  </p>
+ 
+ <img class="icon" src="../icon_mail.png" alt="mail_icon">
+ <div class="clear"></div>
+ </div>
+</div>
+
+</div>
+
+<div class="footer">Нижний бок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом </div>
+</body>
+</html>

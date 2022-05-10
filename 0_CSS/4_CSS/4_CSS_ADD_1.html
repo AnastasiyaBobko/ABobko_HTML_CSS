@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html 
+lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  P {
+height: 5em;
+text-indent:2em;
+border:1px outset rgb(211, 211, 211);
+border-radius:0em 1em 0em 1em;
+margin: 0;
+}
+
+a[id$="extref"]::before{content: url('extref.png'); background-repeat: no-repeat;}
+
+a[href*="doc"]:not(#extref)::after{content: url('logo-doc.jpg'); background-repeat: no-repeat;}
+a[href*="PDF"]:not(#extref)::after{content: url('logo-pdf.png'); background-repeat: no-repeat;}
+a[href*="ZIP"]:not(#extref)::after{content: url('logo-zip.gif'); background-repeat: no-repeat;}
+
+a[href*="doc"]:hover::after{content: url('logo-doc.jpg'); background-repeat: no-repeat;}
+a[href*="PDF"]:hover::after{content: url('logo-pdf.png'); background-repeat: no-repeat;}
+a[href*="ZIP"]:hover::after{content: url('logo-zip.gif'); background-repeat: no-repeat;}
+
+ul {list-style-image: url('logo-list.jpg');}
+</style>
+<body>
+    <h1> Форматы файлов.</h1>
+<p> .DOC или .doc (от англ.<a href="doc" id="extref"> document </a>) — расширение имени файла, используемое для файлов, представляющих текст, с разметкой или без.Расширение .DOC часто использовалось для обозначения простых текстовых файлов без форматирования, однако позже стало использоваться для двоичных форматов с разметкой.
+ <a href="doc">Документ MS Word</a></p>
+
+<p>Portable Document Format (<a href="PDF" id="extref">PDF</a> ) — межплатформенный 
+    формат электронных документов, разработанный фирмой Adobe Systems с использованием ряда возможностей языка PostScript.
+   <a href="PDF">Документ PDF </a>
+</p>
+
+<p>ZIP — популярный формат сжатия данных и архивации файлов. Файл в этом формате обычно имеет расширение
+    <a href="ZIP" id="extref">.zip</a>  и хранит в сжатом или несжатом виде один или несколько файлов, 
+    которые можно из него извлечь путём распаковки с помощью специальной программы. <a href="ZIP">Архив</a> </p>
+
+<h1>Это список из файлов</h1> 
+
+<ul>
+    
+<li> <a href="file1">Документ MS Word </a></li>
+<li> <a href="file2">Документ PDF</a></li>
+<li> <a href="file3">Архив</a></li>
+</ul>
+</body>
+</html>

@@ -11,16 +11,14 @@
     table {
 width: 800px;
 height: 800px;
-border: solid;
-border-color: black;
-counter-reset: td 65;}
+border: 5px solid black;
+counter-reset: td 65;
+text-align: center;
+font-size:50px;}
 
 td::after {
 counter-increment: td -1;
 content:  counter(td);
-font-size: 40px;
-align: center;
-
 
 }
 
@@ -29,7 +27,7 @@ tr:nth-child(odd) td:nth-child(odd) {
    }
    	
    tr:nth-child(even) td:nth-child(even) {
-	background: black; color: aliceblue; 
+	background: black; color: aliceblue;
 }
     
 </style>
